@@ -1,786 +1,225 @@
-@charset "utf-8";
-/*
-=======================================
-  Reset CSS
-=======================================
-*/
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, main, menu, nav, section, summary,
-time, mark, audio, video{
-  margin:0;
-  padding:0;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Twede's cafe</title>
+<meta name="keywords" content="ドッグカフェ,保護犬,里親,保護猫">
+<meta name="description" content"東京の小笠原諸島にある保護犬・猫カフェ">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/e38b8fb165.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container inner">
+            <h1><a href="index.html">TWEDE'S CAFE</a></h1>
+            <ul class="header-nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="staff.html">STAFF</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="foster.html">FOSTER</a></li>
+            </ul>
+            <button class="hamburger">
+                <i class="fas fa-bars open"></i>
+                <i class="fas fa-times "></i>
 
-article,aside,details,figcaption,figure,
-footer,header,main,menu,nav,section{
-  display:block;
-}
-
-html{
-  -webkit-text-size-adjust: 100%;
-}
-
-img{
-  border: 0;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-ul{
-  list-style-type: none;
-}
-
-
-table {
-  border-collapse: collapse; 
-  border-spacing: 0;
-}
-
-img, input, select, textarea { 
-  vertical-align: middle;
-}
-
-a{
-  text-decoration: none;
-  display: block;
-}
-
-/* 共通 */
-
-body{
-  line-height: 1.5em;
-  font-family: sans-serif;
-  color:#333 ;
-  
-}
-@media(max-width:768px){
-    html{font-size: 10px;
-    }
-  }
-
-.inner{
-  max-width: 1366px;
-  width: 90%;
-  margin: auto;
-}
-section+section{
-  padding-top: 5rem;
-}
-main{
-  background-color: #eee;
-}
-p{
-  font-size: clamp(13px,1.5vw,15px);
-  min-height: 0vw;
-  line-height: 1.7em;
-  font-family: sans-serif;
-}
-h2,h3,h4{
-  font-family: 'Dancing Script', cursive;
+            </button>
+        </div>
+        
+    </header>
+    <div class="modal-nav">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="staff.html">STAFF</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="foster.html">FOSTER</a></li>
+        </ul>
+    </div>
+    <div id="hero">
+            <img src="img/artboard retriever.jpg" alt="メインイメージ">
+    </div>
+    <main>
+        <section id="cafe-desc">
+            <div class="inner cafe-desc_container">
+                <figure><img src="img/IMG_2494 small.jpg" alt="野良猫"></figure>
+                <div>
+                    <h2>保護犬・猫カフェとは？</h2>
+                    <p>施設から引き取ったワンちゃんや猫ちゃんと触れ合えるカフェです。<br>
+                        カフェの売上金は、動物の保護活動に役立てられます。また、一定の条件を
+                        満たせば、里親になることもできます。<br>
+                        ワンちゃん達とカフェで直接触れ合えるので、事前に相性を確かめられるのが魅力です。
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="main-nav">
+            <div class="inner">
+                <ul class="main-nav_container">
+                    <li>
+                        <h3>STAFF</h3>
+                        <figure><img src="img/1567384400396 line small.jpg" alt="スタッフ写真"></figure>
+                        <a href="staff.html">スタッフ一覧<span class="fas fa-caret-right"></span></a>
+                    </li>
+                    <li>
+                        <h3>MENU</h3>
+                        <figure><img src="img/coffee-2179028_640.jpg" alt="メニュー写真"></figure>
+                        <a href="menu.html">メニュー一覧<span class="fas fa-caret-right"></span></a>
+                    </li>
+                    <li>
+                        <h3>FOSTER</h3>
+                        <figure><img src="img/dog-3601383_640.jpg" alt="里親イメージ"></figure>
+                        <a href="foster.html">里親について<span class="fas fa-caret-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="news">
+            <div class="inner">
+                <div class="news-container">
+                <h2>NEWS<span class="fab fa-envira"></span></h2>
+                    <ul>
+                        <li>桃太郎に100匹子供が生まれました。</li>
+                        <li>TV番組・世界なぜそこにドッグカフェで取り上げられました。</li>
+                        <li>新たにアフリカに支店が出来ました。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="location">
+            <div class="inner">
+                <h2>LOCATION</h2>
+                <div class="slider">
+                    <div class="image_box">
+                        <figure><img class="main-image" src="img/IMG_0813 small.jpg" alt="カフェ"></figure>
+                    </div>
+                    <div class="toolbar">
+                        <div class="nav-btn">
+                            <i class="fas fa-angle-left prev"></i>
+                            <i class="fas fa-angle-right next"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-desc">
+                    <div class="circle-ttl">
+                        <div>
+                            <i class="fas fa-dove"></i>
+                            <h3>relax</h3>
+                        </div>
+                    </div>
+                    
+                    <p>目の前には海が広がり、周囲には緑が生い茂る心地よい環境にあるカフェです。<br>
+                        テキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキスト
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="access">
+            <div class="inner">
+                <h2>ACCESS</h2>
+                <div class="access-desc">
+                    <dl>
+                        <dt>住所</dt>
+                        <dd>〒123-4567 東京都小笠原村父島</dd>
+                        <dt>交通</dt>
+                        <dd>ほぼ週1便の定期船「おがさわら丸」が東京竹芝桟橋から出航しています。<br>
+                            フェリー乗り場からカフェまで徒歩5時間です。
+                        </dd>
+                    </dl>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6057.115788971051!2d142.18786177368912!3d27.06196545483268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc9587e71921069fa!2z44OW44K_5rW35bK4!5e0!3m2!1sja!2sjp!4v1654696051247!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-logo">
+                <h2><a href="index.html">TWEDE'S CAFE</a></h2>
+            </div>
+            <ul class="sns">
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <ul class="footer-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="staff.html">STAFF</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="foster.html">FOSTER</a></li>
+            </ul>
+            <div class="footer-copy">
+                copyright © TWEDE'S CAFE, Inc.
+            </div>
+        </div>
+        </div>
+    </footer>
     
-}
-h2{
-  font-size: clamp(20px,2.5vw,30px);
-  min-height: 0vw;
-}
-h3{
-  font-size: clamp(17px,2vw,22px);
-  min-height: 0vw;
-}
-
-dt,dd{
-  font-size: clamp(13px,1.6vw,17px);
-  min-height: 0vw;
-}
-
-ul{
-  font-size: 1.2rem;
-}
-
-
-/* header */
-header{
-    height: 50px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    /* background-color: #fff; */
-    background-color: #fee554;
-}
-header h1 a{
-    font-family: 'Dancing Script', cursive;
-    color: #fff;
-    
-}
-.header-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-.header-nav{
-    display:none;
-}
-.header-nav{
-    display: none;
-}
-.header-nav li a{
-  color: #fff;
-}
-.header-nav li a:hover{
-  color: gray;
-}
-.hamburger {
-    font-size: 3rem;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    color: #fff;
-}
-.hamburger .fa-bars.open{
-  display: block;
-}
-.hamburger .fa-bars{
-  display: none;
-}
-.hamburger .fa-times.open{
-  display: block;
-}
-.hamburger .fa-times{
-  display: none;
-}
-@media (min-width:768px){
-    header{
-        height: 100px;
+<script>
+    (function(){
+        const faBars=document.querySelector('.fa-bars');
+        const faTimes=document.querySelector('.fa-times');
+        const modalNav=document.querySelector('.modal-nav');
+        faBars.addEventListener('click',function(){
+            faBars.classList.remove('open');
+            faTimes.classList.add('open');
+            modalNav.classList.add('open');
+        });
+        faTimes.addEventListener('click',function(){
+            faBars.classList.add('open');
+            faTimes.classList.remove('open');
+            modalNav.classList.remove('open');
+        });
+    })();
+     // slider
+     (function(){
+        const images=["img/IMG_0813 small.jpg","img/IMG_0254 small.jpg","img/IMG_0562 small.jpg"];
+        let current=0;
+        function changeImage(current){
+            document.querySelector('.main-image').src=images[current];
+        };
+        document.querySelector('.prev').addEventListener('click',function(){
+        
+        if (current == 0) {
+            current = 2;
+        }
+        else {
+            current --;
+        }
+        changeImage(current);
+        clearInterval(timer);
+        // timer=setInterval(slide_timer, 3000);
+        
+    });
+        document.querySelector('.next').addEventListener('click',function(){
+        if (current == 2) {
+            current = 0;
+        }
+        else {
+            current ++;
+        }
+        changeImage(current);
+        clearInterval(timer);
+        // timer=setInterval(slide_timer, 3000);
+    });
+    function slide_timer(){
+        if (current == 2) {
+            current = 0;
+        }
+        else {
+            current ++;
+        }
+        changeImage(current); 
     }
-    .hamburger{
-        display: none;
-    }
-    .header-nav{
-        display: flex;
-        gap: 2rem;
-    }
-}
-/* modal-nav */
-.modal-nav{
-  background-color:#333;
-  opacity: 0.9;
-  width: 40%;
-  height: 100%;
-  position: fixed;
-  top: 50px;
-  right: 0;
-  color: #fff;
-  text-align: center;
-  
-  z-index: 10;
-}
-.modal-nav.open{
-  display: block;
-}
-.modal-nav{
-  display: none;
-}
 
-.modal-nav ul li{
-  margin-top: 3rem;
-}
-.modal-nav ul li a{
-  color: #fff;
-  font-size: 2rem;
-}
-.modal-nav ul li a:hover{
-  color: #fee554;
-}
-@media (min-width:768px){
-  .modal-nav{
-    display: none;
-  }
-}
+    timer=setInterval(slide_timer, 5000);
+    })();
+</script>    
+</body>
 
-
-
-#hero{
-  max-width: 1366px;
-  margin: auto;
-}
-/* cafe-desc */
-#cafe-desc{
-  padding-top: 5rem;
-}
-.cafe-desc_container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  box-shadow: 0 0 3px rgba(0,0,0,0.2);
-}
-.cafe-desc_container div{
-  padding: 3rem;
-  flex: 1;
-  
-}
-.cafe-desc_container figure{
-  flex: 1;
-}
-.cafe-desc_container h2{
-  font-family: sans-serif;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.cafe-desc_container p{
-  position: relative;
-  padding: 2rem;
-}
-.cafe-desc_container p::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3rem;
-  height: 3rem;
-  border-top: 4px solid #fee554;
-  border-left: 4px solid #fee554;
-}
-.cafe-desc_container p::after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 3rem;
-  height: 3rem;
-  border-bottom: 4px solid #fee554;
-  border-right: 4px solid #fee554;
-}
-
-
-
-
-@media (min-width:768px){
-  .cafe-desc_container{
-    flex-direction: row;
-  }
-}
-
-/* main-nav */
-.main-nav_container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-  text-align: center;
-}
-.main-nav_container li{
-  background-color: #fff;
-  padding: 3rem;
-  flex: 1;
-  box-shadow: 0 0 3px rgba(0,0,0,0.2);
-}
-.main-nav_container li figure img{
-  margin: 3rem 0;
-  aspect-ratio: 3/2;
-  object-fit: cover;
-  width: 100%;
-}
-
-.main-nav_container li a{
-  background-color: #fee554;
-  padding: 1.2rem;
-  border-radius: 2rem;
-  color: #333;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.main-nav_container li a:hover{
-  filter: brightness(90%) contrast(120%);
-}
-
-.main-nav_container li a span{
-  margin-left: 1rem;
-  font-size: 2rem;
-  color: rgb(249, 63, 63);
-}
-@media(min-width:768px){
-  .main-nav_container{
-    justify-content: space-between;
-    flex-direction: row;
-  }
-}
-
-/* news */
-
-#news{
-  text-align: center;
-  color: #fff;
-  margin-bottom: 5rem;
-}
-.news-container{
-  background-color: #00fa9a;
-  width: 70%;
-  margin: 0 0 0 auto;
-  padding: 2rem;
-  border-radius: 3rem 0 0 0;
-}
-#news h2{
-  color:#fff;
-}
-#news h2 span{
-  margin-left: 1rem;
-  font-size: 2rem;
-  
-}
-#news ul{
-  margin-top: 2rem;
-  
-}
-#news ul li+li{
-  margin-top: 1rem;
-}
-
-/* location */
-#location{
-  background-color: #fff;
-}
-#location h2{
-  text-align: center;
-  font-weight: normal;
-  margin-bottom: 3rem;
-  font-family: 'Dancing Script', cursive;
-}
-/* slider */
-.slider{
-  width: 80%;
-  margin: 0 auto 0 0;
-  position: relative;
-}
-.slider figure img{
-  border-radius: 0 4rem 0 0;
-  aspect-ratio: 2/1;
-  object-fit: cover;
-  width: 100%;
-}
-.nav-btn i{
-  color: #fff;
-  opacity: 0.7;
-  font-size: 4rem;
-}
-.nav-btn .prev{
-  position: absolute;
-  top: 45%;
-  left: 2rem;
-}
-.nav-btn .next{
-  position: absolute;
-  top: 45%;
-  right: 2rem;
-}
-
-.location-desc{
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  padding: 3rem 0;
-}
-
-.circle-ttl{
-  background-color: #00fa9a;
-  border-radius: 50%;
-  text-align: center;
-  width: 8rem;
-  height: 8rem;
-  color: #fff;
-  position: relative;
-
-
-}
-.circle-ttl div{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-.circle-ttl i{
-  font-size: 2rem;
-}
-.circle-ttl h3{
-  font-weight: normal;
-}
-.location-desc p{
-  position: relative;
-  width: 70%;
-  padding: 2rem;
-}
-.location-desc p::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3rem;
-  height: 3rem;
-  border-top: 4px solid #fee554;
-  border-left: 4px solid #fee554;
-}
-.location-desc p::after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 3rem;
-  height: 3rem;
-  border-bottom: 4px solid #fee554;
-  border-right: 4px solid #fee554;
-}
-
-/* access */
-#access h2{
-  text-align: center;
-  font-weight: normal;
-  margin-bottom: 3rem;
-  font-family: 'Dancing Script', cursive;
-}
-.access-desc{
-  max-width: 900px;
-  margin: auto;
-  
-}
-.access-desc dl{
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  row-gap: 1rem;
-}
-.access-desc dl dt{
-  font-weight: bold;
-  width: 20%;
-}
-.access-desc dl dd{
-  width: 80%;
-}
-.map iframe{
-  width: 100%;
-  margin-top: 2rem;
-}
-
-/* footer */
-footer{
-  background-color: #fee554;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 0;
-}
-footer h2 a{
-  color: #fff;
-}
-footer .sns{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-footer .sns a{
-  font-size: 2rem;
-  color: #fff;
-}
-footer .sns a:hover{
-  color: gray;
-}
-footer .footer-menu{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-footer .footer-menu a{
-  color: #fff;
-}
-footer .footer-menu a:hover{
-  color: gray;
-}
-/* staff , menu*/
-
-.section-ttl{
-  color: #fff;
-  width: 40%;
-  text-align: center;
-  margin: 0 0 0 auto;
-  background-color: #00fa9a;
-  border-radius: 3rem 0 0 3rem;
-  padding:1.5rem ;
-}
-.white{
-  background-color: #fff;
-  padding: 5rem 0 1rem 0;
-}
-.main-item{
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-}
-
-.main-item_container{
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 2rem;
-}
-.main-item_container div{
-  flex: 1;
-  
-}
-.main-item_container div p{
-  width: 80%;
-  margin: auto;
-}
-.main-item_container figure{
-  flex: 1;
-  
-}
-.main-item_container figure .main-staff{
-  
-  border-radius: 2rem;
-}
-.main-food{
-  width: 80%;
-  margin: auto;
-}
-#staff h3,#menu h3,#dog-menu h3,#voice .items-container h3{
-  background-color: #fee554;
-  text-align: center;
-  padding: 1rem;
-  width: 14rem;
-  margin: 0 auto 2rem;
-  border-radius: 2rem;
-  /* font-weight: 500; */
-  font-family: sans-serif;
-}
-
-.items-container{
-  display: flex;
-  justify-content: space-between;
-  row-gap: 3rem;
-  flex-wrap: wrap;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.items-container li{
-  width: 49%;
-  background-color: #fff;
-  box-shadow: 3px 3px 5px rgb(202, 199, 199);
-  padding: 1.5rem 0;
-}
-.items-container li figure img{
-  aspect-ratio: 3/2;
-  width: 90%;
-  object-fit: cover;
-  margin: 0 auto 1.5rem;
-  border-radius: 1rem;
-} 
-
-.items-container li p{
-  width: 80%;
-  margin: auto;
-}
-.items-container li p.price,.main-item_container p.price{
-  text-align: center;
-  margin-top: 1rem;
-}
-
-@media (min-width:768px){
-  .main-item_container{
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .items-container li{
-    width: 32%;
-  }
-}
-
-/* foster */
-
-#foster .section-ttl{
-  margin-bottom:5rem ;
-}
-#foster h3{
-  text-align: center;
-  margin: 4rem 0 3rem;
-}
-#foster ul{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content:center;
-  gap: 2rem;
-  
-}
-#foster ul li i{
-  background-color: transparent;
-  border: none;
-  outline: none;
-  font-size: 2rem;
-} 
-#foster ul li i.fa-caret-right{
-  font-size: 3rem;
-}
-#foster ul .circle-items{
-  background-color: #fee554;
-  border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
-  color: #fff;
-  text-align: center;
-  position: relative;
-}
-#foster ul .circle-items div{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-#foster ul .triangle{
-  color: #fee554;
-}
-/* condition */
-
-#condition{
-  text-align: center;
-  color: #fff;
-  margin-bottom: 5rem;
-}
-.condition-container{
-  background-color: #00fa9a;
-  width: 70%;
-  margin: 0 0 0 auto;
-  padding: 2rem;
-  border-radius: 3rem 0 0 0;
-}
-#condition h2{
-  color: #fff;
-}
-
-#condition ul{
-  margin-top: 2rem;
-}
-#condition ul li+li{
-  margin-top: 1rem;
-}
-
-/* voice */
-#voice{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-#voice h3{
-  text-align: center;
-}
-#voice ul{
-  display: flex;
-  flex-direction: column;
-  row-gap: 10rem;
-  margin-top: 10rem;
-}
-#voice ul li{
-  width: 100%;
-  box-shadow: 0 0 3px rgba(0,0,0,0.2);
-  background-color: #fff;
-  padding: 4rem 0 2rem;
-  position: relative;
-}
-#voice ul li figure img{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 9rem;
-  height: 9rem;
-  border-radius: 50%;
-  transform: translate(-50%,-70%);
-  object-fit: cover;
-}
-#voice ul li h3{
-  background-color: #fee554;
-  text-align: center;
-  padding: 1rem;
-  width: 14rem;
-  margin: 0 auto 2rem;
-  border-radius: 2rem;
-  /* font-weight: 500; */
-  font-family: sans-serif;
-}
-#voice ul li p{
-  width: 80%;
-  margin: auto;
-  margin-top: 2rem;
-}
-@media (min-width:768px){
-  #voice ul {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #voice ul li{
-    width: 49%;
-  }
-}
-/* request */
-#request{
-  margin-top: 5rem;
-  
-}
-.request-container{
-  background-color: #fff;
-  box-shadow: 0 0 3px rgba(0,0,0,0.2);
-  padding: 3rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-#request h2{
-  text-align: center;
-}
-#request dl{
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  
-}
-#request dl dt{
-  width: 20%;
-  margin-top: 1.5rem;
-  padding: 0.5rem;
-
-}
-#request dl dd{
-  width: 75%;
-  margin-top: 1.5rem;
-  
-}
-#request dl dd input,#request dl dd textarea{
-  padding: 0.5rem;
-  box-sizing: border-box;
-  width: 100%;
-  
-}
-
-#request .submit input{
-  margin-top: 1.5rem;
-  padding: 0.5rem;
-  
-}
-@media(min-width:768px){
-  .request-container{
-    width: 60%;
-    margin: auto;
-  }  
-
-}
+</html>
