@@ -390,6 +390,7 @@ header h1 a{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 3rem;
   padding: 3rem 0;
 }
@@ -441,6 +442,11 @@ header h1 a{
   height: 3rem;
   border-bottom: 4px solid #fee554;
   border-right: 4px solid #fee554;
+}
+@media(min-width:768px){
+  .location-desc{
+    flex-direction: row;
+  }
 }
 
 /* access */
@@ -520,6 +526,7 @@ footer .footer-menu a:hover{
   background-color: #00fa9a;
   border-radius: 3rem 0 0 3rem;
   padding:1.5rem ;
+  line-height:1.2em;
 }
 .white{
   background-color: #fff;
@@ -559,7 +566,7 @@ footer .footer-menu a:hover{
   background-color: #fee554;
   text-align: center;
   padding: 1rem;
-  width: 14rem;
+  width: 12rem;
   margin: 0 auto 2rem;
   border-radius: 2rem;
   /* font-weight: 500; */
